@@ -13,8 +13,7 @@ const Home = () => {
     const [totalPages, setTotalPages] = useState();
     const [results, setResults] = useState();
     const count = 100;
-    const { data, loading, error } = useRestApi(endpoint, { limit: count, offset: (currentPage - 1) * count });
-    console.log(data, loading, error);
+    const { data, error } = useRestApi(endpoint, { limit: count, offset: (currentPage - 1) * count });
 
     useEffect(() => {
         if (data?.count) {

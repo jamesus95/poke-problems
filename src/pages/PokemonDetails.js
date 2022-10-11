@@ -11,8 +11,7 @@ const endpoint = new Endpoint(({ id }) => {
 const PokemonDetails = () => {
     const { id } = useParams();
     const [result, setResult] = useState();
-    const { data, loading, error } = useRestApi(endpoint, { id });
-    console.log(data, loading, error);
+    const { data, error } = useRestApi(endpoint, { id });
 
     useEffect(() => {
         if (data) {
