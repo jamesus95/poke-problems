@@ -56,7 +56,7 @@ const Home = () => {
                 <tbody>
                     {results.map((pokemon, index) => {
                         const segments = pokemon.url.split('/');
-                        const number = segments[segments.length - 2];
+                        const number = segments[segments.length - 1];
 
                         return <tr key={index}>
                             <td>{pokemon.name}</td>
