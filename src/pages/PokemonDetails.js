@@ -14,10 +14,10 @@ const PokemonDetails = () => {
     const { data, error } = useRestApi(endpoint, { id });
 
     useEffect(() => {
-        if (data) {
-            setResult(data);
+        if (data?.result) {
+            setResult(data.result);
         }
-    }, [data])
+    }, [data?.result])
 
     if (!result) {
         return <div>loading...</div>
